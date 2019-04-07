@@ -11,6 +11,10 @@ header{
     background-position: center;
 }
 
+a{
+    text-decoration: none;
+}
+
 ul{
     float: right;
     list-style-type: none;
@@ -75,18 +79,6 @@ ul li.active a{
 #myBtn:hover{
     background-color: #555;
     color: white;
-}
-
-.intro_container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.intro_container h1{
-    color: #e6e6e4;
-    font-size: 70px;
 }
 
 .page_container{
@@ -224,6 +216,82 @@ ul li.active a{
     height: 10px;
 }
 
+.projects_section{
+    padding: 70px 0;
+    background-color: #e6e6e4;
+    text-align: center;
+}
+
+.projects_container{
+    max-width: 1200px;
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 35px;
+}
+
+.projects_container h1{
+    color: #6c8a9b;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.projects_main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    margin: 0 100px;
+}
+
+.projects{
+    position: relative;
+    overflow: hidden;
+    max-height: 500px;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px #808080;
+    border-radius: 20px;
+}
+
+.projects_content{
+    position: absolute;
+    left: 0;
+    bottom: -38px;
+    width: 100%;
+    color: #fff;
+    padding: 10px 5px;
+    background: linear-gradient(45deg, rgba(0,0,0,0.5), rgba(130,130,130,0.5) 100%);
+    transition: all 0.5s;
+}
+
+.projects:hover .projects_content{
+    bottom: 0;
+    transition: all 0.5s;
+}
+
+.projects_content h3{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.projects_content a{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.projects_content .btn{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.projects_content .btn:hover{
+    background-color: #fff;
+    color: #000;
+}
+
 .contact_outer{
     background-color: #e6e6e4;
     width: auto;
@@ -296,4 +364,65 @@ ul li.active a{
     color: #ffffff;
     position: relative;
     top: 10%;
+}
+
+
+/*Mobile*/
+@media (max-width:778px){
+    .logo img{
+        margin: auto;
+        width: 80px;
+    }
+    
+    .main{
+        width: 480px;
+    }
+    
+    ul{
+        display: table;
+        margin: 30px auto;
+    }
+
+    ul li{
+        display: inline-block;
+        padding: 5px;
+    }
+    
+    ul li a{
+        padding: 10px 20px;
+    }
+    
+    .page_container h1{
+        font-size: 30px;
+    }
+    
+    .about_me_inner{
+        width: 450px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+    
+    .skill_container_inner{
+        width: 400px;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        padding: 20px;
+        transform: translate(-50%, -50%);
+    }
+    
+    .projects_main{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+    }
+    
+    .contact_inner{
+        width: 450px;
+    }
+    
+    .contact_list{
+        position: relative;
+        margin: auto;
+        transform: translate(0%);
+    }
 }
