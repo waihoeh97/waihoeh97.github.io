@@ -225,8 +225,7 @@ ul li.active a{
 .projects_container{
     max-width: 1200px;
     width: 70%;
-    margin: 0 auto;
-    padding-bottom: 35px;
+    margin: 50px auto;
 }
 
 .projects_container h1{
@@ -359,7 +358,7 @@ ul li.active a{
 
 #footer h3{
     text-align: center;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 100;
     color: #ffffff;
     position: relative;
@@ -374,13 +373,11 @@ ul li.active a{
         width: 80px;
     }
     
-    .main{
-        width: 480px;
-    }
-    
     ul{
+        float: left;
         display: table;
         margin: 30px auto;
+        padding-right: 0px;
     }
 
     ul li{
@@ -403,7 +400,7 @@ ul li.active a{
     }
     
     .skill_container_inner{
-        width: 400px;
+        width: auto;
         top: 50%;
         left: 50%;
         position: absolute;
