@@ -333,15 +333,16 @@ ul li.active a{
 }
 
 .modal_content h2{
+    font-size: 50px;
     color: #6c8a9b;
-    margin-bottom: 16px;
+    margin-bottom: 50px;
 }
 
 .modal_content p{
     text-align: left;
     line-height: 25px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .modal_content span{
