@@ -324,6 +324,19 @@ ul li.active a{
     transition: all 0.5s;
 }
 
+.modal_images {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.modal_images img {
+    width: 600px !important;
+}
+
+.modal_videos p{
+    text-align: center !important;
+    font-weight: bold;
+}
+
 .modal-close{
     cursor: pointer;
     color: black;
