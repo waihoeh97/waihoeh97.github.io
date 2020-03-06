@@ -155,6 +155,16 @@ ul li.active a{
     line-height: 2;
 }
 
+.intro_a{
+    text-decoration: none;
+    color: #6c8a9b;
+}
+
+.intro_a:hover{
+    background-color: #6c8a9b;
+    color: #f9f5ef;
+}
+
 .skill_container_outer{
     background-color: #f9f5ef;
     width: auto;
