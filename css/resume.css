@@ -4,9 +4,10 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
 body {
-  font-family: 'Open Sans', serif;
+  font-family: 'Roboto', sans-serif;
   padding-top: 54px;
-  color: #868e96; }
+  color: #606470;
+  background-color: #F7F7F7; }
 
 @media (min-width: 992px) {
   body {
@@ -19,39 +20,61 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Saira Extra Condensed', serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  color: #343a40; }
+  color: #606470; }
 
 h1 {
-  font-size: 6rem;
-  line-height: 5.5rem; }
+  font-size: 4rem;
+  line-height: 4.5rem; }
 
 h2 {
-  font-size: 3.5rem; }
+  font-size: 2.5rem; }
 
 .subheading {
   text-transform: uppercase;
   font-weight: 500;
-  font-family: 'Saira Extra Condensed', serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.35rem; }
 
 .list-social-icons a {
   color: #495057; }
   .list-social-icons a:hover {
-    color: #BD5D38; }
+    color: #93DEFF; }
   .list-social-icons a .fa-lg {
     font-size: 1.75rem; }
 
 .list-icons {
-  font-size: 3rem; }
+  font-size: 5rem; }
   .list-icons .list-inline-item i:hover {
-    color: #BD5D38; }
+    color: #93DEFF; }
 
 #sideNav .navbar-nav .nav-item .nav-link {
   font-weight: 600;
   text-transform: uppercase; }
+
+#about {
+  height: 100vh;
+}
+
+#footer{
+  background-color: #323643;
+  height: 40px;
+  margin-top: -40px;
+  position: relative;
+  clear: both;
+}
+
+#footer p{
+  text-align: center;
+  font-size: 13px;
+  font-weight: 100;
+  color: #ffffff;
+  position: relative;
+  margin-bottom: 0 !important;
+  top: 25%;
+}
 
 @media (min-width: 992px) {
   #sideNav {
@@ -86,7 +109,7 @@ h2 {
             display: block; } }
 
 section.resume-section {
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid #F7F7F7;
   padding-top: 5rem !important;
   padding-bottom: 5rem !important; }
   section.resume-section .resume-item .resume-date {
@@ -104,12 +127,12 @@ section.resume-section {
     padding-bottom: 3rem !important; } }
 
 .bg-primary {
-  background-color: #BD5D38 !important; }
+  background-color: #323643 !important; }
 
 .text-primary {
-  color: #BD5D38 !important; }
+  color: #323643 !important; }
 
 a {
-  color: #BD5D38; }
+  color: #323643; }
   a:hover, a:focus, a:active {
-    color: #824027; }
+    color: #323643; }
