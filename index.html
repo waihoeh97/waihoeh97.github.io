@@ -6,6 +6,8 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Wai Hoeh - Game Programmer</title>
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
@@ -61,8 +63,16 @@
             <!-- Section - Work Projects -->
             <section class="resume-section resume-section-bg-dark" id="work-projects">
                 <div class="resume-section-content">
-                <h2 class="mb-5">Work Projects</h2>
-                <h3>Under construction</h3>
+                <h2 class="mb-3">Work Projects</h2>
+                <h5>Browse through a collection of work projects</h5>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/bg.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/bg.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/bg.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
                 </div>
             </section>
             <hr class="m-0" />
@@ -70,7 +80,16 @@
             <section class="resume-section resume-section-bg-light" id="personal-projects">
                 <div class="resume-section-content">
                 <h2 class="mb-5">Personal Projects</h2>
-                <h3>Under construction</h3>
+                <h5>Here are some of my hobby / freetime projects</h5>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="img/bg.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/bg.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="img/bg.jpg" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
                 </div>
             </section>
             <!-- Experience-->
@@ -199,6 +218,17 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <!-- FMOD icon -->
-    <script src="https://code.iconify.design/2/2.2.0/iconify.min.js"></script>
+        <script src="https://code.iconify.design/2/2.2.0/iconify.min.js"></script>
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+            el: ".swiper-pagination",
+            },
+        });
+        </script>
     </body>
 </html>
