@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lum Wai Hoeh — Senior Game Programmer</title>
+<meta name="author" content="Lum Wai Hoeh">
+<meta name="description" content="Senior Game Programmer with 5+ years shipping mobile games in Unity (C#) and Roblox (Lua).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ====== EDIT COLORS / SPACING HERE ====== */
+  :root{
+    --ink:#1a1410;          /* main text */
+    --ink-soft:#4a4038;     /* secondary text */
+    --ink-faint:#8a7d70;    /* muted labels */
+    --paper:#fbf8f3;        /* page background */
+    --card:#ffffff;         /* sheet background */
+    --accent:#b5482b;       /* terracotta accent */
+    --accent-deep:#7a2e18;  /* darker accent */
+    --line:#e6ddd0;         /* hairlines */
+    --rule:#1a1410;         /* heavy rule */
+    --max:760px;            /* sheet width */
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:15px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    padding:48px 20px;
+    background-image:radial-gradient(var(--line) 0.5px, transparent 0.5px);
+    background-size:22px 22px;
+  }
+
+  .sheet{
+    max-width:var(--max);
+    margin:0 auto;
+    background:var(--card);
+    padding:56px 60px 52px;
+    border:1px solid var(--line);
+    box-shadow:0 1px 2px rgba(26,20,16,.04),0 28px 60px -28px rgba(26,20,16,.22);
+    position:relative;
+  }
+  .sheet::before{
+    content:"";position:absolute;inset:0;
+    border:1px solid rgba(181,72,43,.18);
+    margin:7px;pointer-events:none;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    gap:24px;padding-bottom:18px;border-bottom:3px solid var(--rule);
+  }
+  .name{
+    font-family:"Fraunces",serif;
+    font-weight:600;
+    font-size:42px;
+    line-height:.98;
+    letter-spacing:-.02em;
+    color:var(--ink);
+  }
+  .title{
+    font-family:"JetBrains Mono",monospace;
+    font-size:11px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-top:10px;
+    font-weight:600;
+  }
+  .contact{
+    text-align:right;
+    font-family:"JetBrains Mono",monospace;
+    font-size:11.5px;
+    line-height:1.9;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+  .contact a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--line)}
+  .contact a:hover{color:var(--accent)}
+
+  /* ---------- SECTIONS ---------- */
+  section{margin-top:30px}
+  h2{
+    font-family:"JetBrains Mono",monospace;
+    font-size:11px;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:var(--accent-deep);
+    font-weight:600;
+    display:flex;align-items:center;gap:14px;
+    margin-bottom:16px;
+  }
+  h2::after{content:"";flex:1;height:1px;background:var(--line)}
+
+  .summary{
+    font-size:16.5px;
+    line-height:1.62;
+    color:var(--ink-soft);
+    font-weight:400;
+  }
+  .summary strong{color:var(--ink);font-weight:600}
+
+  /* ---------- EXPERIENCE ---------- */
+  .job{margin-bottom:24px}
+  .job:last-child{margin-bottom:0}
+  .job-head{
+    display:flex;justify-content:space-between;align-items:baseline;
+    gap:16px;margin-bottom:3px;
+  }
+  .role{
+    font-family:"Fraunces",serif;
+    font-weight:600;font-size:18px;color:var(--ink);
+  }
+  .company{color:var(--accent);font-weight:600}
+  .date{
+    font-family:"JetBrains Mono",monospace;
+    font-size:10.5px;letter-spacing:.06em;
+    color:var(--ink-faint);white-space:nowrap;
+    text-transform:uppercase;
+  }
+  ul{list-style:none;margin-top:8px}
+  ul li{
+    position:relative;padding-left:20px;margin-bottom:5px;
+    color:var(--ink-soft);font-size:14.5px;line-height:1.5;
+  }
+  ul li::before{
+    content:"";position:absolute;left:2px;top:9px;
+    width:6px;height:6px;background:var(--accent);
+    transform:rotate(45deg);
+  }
+  ul li strong{color:var(--ink);font-weight:600}
+
+  /* ---------- SKILLS ---------- */
+  .skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px 40px}
+  .skill-row{
+    display:flex;gap:12px;padding:5px 0;
+    border-bottom:1px solid var(--line);align-items:baseline;
+  }
+  .skill-row .k{
+    font-family:"JetBrains Mono",monospace;
+    font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--ink-faint);min-width:96px;flex-shrink:0;
+  }
+  .skill-row .v{font-size:14px;color:var(--ink)}
+
+  /* ---------- EDUCATION ---------- */
+  .edu-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+  .edu-school{font-family:"Fraunces",serif;font-weight:600;font-size:17px}
+  .edu-degree{color:var(--ink-soft);font-size:14.5px;margin-top:2px}
+  .edu-degree .cgpa{color:var(--accent);font-weight:600}
+
+  /* ---------- PRINT ---------- */
+  @media print{
+    body{padding:0;background:#fff;background-image:none;font-size:13px;line-height:1.4}
+    .sheet{box-shadow:none;border:none;max-width:100%;padding:24px 34px}
+    .sheet::before{display:none}
+    @page{margin:9mm}
+    .name{font-size:34px}
+    .summary{font-size:13px;line-height:1.42}
+    section{margin-top:15px}
+    h2{margin-bottom:9px}
+    .job{margin-bottom:11px}
+    ul{margin-top:5px}
+    ul li{font-size:12px;margin-bottom:3px;line-height:1.36}
+    .role{font-size:15px}
+    .skill-row{padding:3px 0}
+    .skill-row .v{font-size:12px}
+    header{padding-bottom:12px}
+  }
+
+  /* ---------- MOBILE ---------- */
+  @media (max-width:620px){
+    body{padding:18px 12px}
+    .sheet{padding:34px 26px}
+    header{flex-direction:column;align-items:flex-start;gap:14px}
+    .contact{text-align:left}
+    .name{font-size:34px}
+    .skills-grid{grid-template-columns:1fr;gap:0}
+    .job-head,.edu-head{flex-direction:column;gap:2px}
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <header>
+    <div>
+      <h1 class="name">Lum Wai Hoeh</h1>
+      <p class="title">Senior Game Programmer</p>
+    </div>
+    <address class="contact">
+      Kuala Lumpur, MY<br>
+      <a href="tel:+60193098212">019-309 8212</a><br>
+      <a href="mailto:waihoeh@gmail.com">waihoeh@gmail.com</a><br>
+      <a href="https://waihoeh97.github.io/">waihoeh97.github.io</a>
+    </address>
+  </header>
+
+  <section>
+    <h2>Profile</h2>
+    <p class="summary">Game programmer with <strong>5+ years of experience and 3–5 shipped titles</strong> developing and shipping games on mobile platforms. Strong background in <strong>Unity (C#)</strong> and <strong>Roblox (Lua)</strong>, with growing expertise in C++ and Unreal Engine. Experienced in mentoring junior programmers, collaborating in cross-functional teams, and building scalable game systems integrated with backend services. Passionate about systems and engine development, with an emphasis on clean architecture and long-term maintainability.</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="role"><span class="company">Omens Studios</span> — Senior Game Developer</div>
+        <div class="date">Nov 2022 – Present</div>
+      </div>
+      <ul>
+        <li>Collaborated closely with the Game Producer to manage programming deliverables and support team coordination within the Interactive team.</li>
+        <li>Developed and shipped <strong>"Leo Kids Games"</strong> on Android and iOS, achieving <strong>320K+ downloads</strong> and <strong>500–700 DAU</strong> across both platforms.</li>
+        <li>Led a team of <strong>3–4 programmers</strong>, overseeing architecture decisions and aligning technical execution with production goals.</li>
+        <li>Built and maintained scalable game systems, flows, and integrations with third-party APIs (Firebase, AWS).</li>
+        <li>Led the programming for <strong>"Leo the Wildlife Ranger Kids Games"</strong> on Roblox, working alongside designers and artists to deliver core gameplay systems.</li>
+        <li>Designed and implemented core mobile features including Quest System, Drone Merging, Mining Field, Daily Activities, and game economy balancing.</li>
+        <li>Mentored <strong>2–3 junior programmers</strong>, conducting code reviews and guiding them through feature ownership on live projects.</li>
+        <li>Led prototyping of new game concepts using in-house IPs across 2D and 3D mobile formats.</li>
+        <li>Currently leading development of <strong>"123 Number Squad Play N Learn"</strong> on Android and iOS — architecting the core game framework, implementing Unity IAP with Firebase Analytics, setting up platform store integration, and managing all platform builds.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <div class="role"><span class="company">Why Knot Studio</span> — Game Programmer</div>
+        <div class="date">Feb 2020 – Oct 2022</div>
+      </div>
+      <ul>
+        <li>Developed games from concept to publication as part of a cross-functional team.</li>
+        <li>Planned programming tasks and coordinated implementation with fellow programmers.</li>
+        <li>Built gameplay systems for both 2D and 3D projects using Unity.</li>
+        <li>Expanded and maintained a custom in-house UI framework used across multiple titles.</li>
+        <li>Implemented new features for live projects and improved code stability and maintainability.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-row"><span class="k">Languages</span><span class="v">C#, Lua, C++</span></div>
+      <div class="skill-row"><span class="k">Engines</span><span class="v">Unity, Roblox Studio, Unreal Engine</span></div>
+      <div class="skill-row"><span class="k">Backend</span><span class="v">Firebase, AWS, REST APIs</span></div>
+      <div class="skill-row"><span class="k">Tools</span><span class="v">Git, SVN, Perforce, FMOD, Photoshop</span></div>
+      <div class="skill-row"><span class="k">AI & Agents</span><span class="v">LLM integration, AI agents, MCP, workflow automation</span></div>
+      <div class="skill-row"><span class="k">Project Mgmt</span><span class="v">Jira</span></div>
+      <div class="skill-row"><span class="k">Spoken</span><span class="v">English, Chinese, Malay, Japanese (N4)</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="edu-head">
+      <div class="edu-school">UOW Malaysia <span style="font-weight:400;color:var(--ink-faint);font-size:13px">(formerly KDU University College)</span></div>
+      <div class="date">Sep 2016 – Nov 2019</div>
+    </div>
+    <p class="edu-degree">Bachelor of Game Development (Hons) &nbsp;·&nbsp; <span class="cgpa">CGPA 3.3</span></p>
+  </section>
+
+</main>
+</body>
+</html>
