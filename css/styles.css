@@ -56,7 +56,8 @@
   --bs-font-sans-serif: Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: Roboto, Muli, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  /* --bs-body-font-family: Roboto, Muli, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
+  --bs-body-font-family: "Newsreader",Georgia,serif;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -104,14 +105,15 @@ hr:not([size]) {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  font-family: Roboto, "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* font-family: Roboto, "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+  font-family: "Fraunces",serif;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: .98;
   color: #343a40;
 }
 
 h1, .h1 {
-  font-size: calc(1.725rem + 5.7vw);
+  font-size: calc(1.725rem + 3.7vw);
 }
 @media (min-width: 1200px) {
   h1, .h1 {
@@ -11294,7 +11296,8 @@ textarea.form-control-lg {
 }
 body {
   padding-top: 3.375rem;
-  color: #6c757d;
+  color: #495057;
+  /* font-family: Roboto, sans-serif; */
 }
 
 @media (min-width: 992px) {
@@ -11321,6 +11324,24 @@ h1, .h1 {
   line-height: 1;
 }
 
+/* Section headings — refined label treatment matching resume.html h2 */
+.resume-section h2 {
+  font-family: "JetBrains Mono", monospace;
+  /* font-size: 11px; */
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  color: #323643;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.resume-section h2::after {
+  content: "";
+  flex: 1;
+  /* height: 1px; */
+  background: #dee2e6;
+}
+
 p.lead {
   font-size: 1.15rem;
   font-weight: 400;
@@ -11330,7 +11351,16 @@ p.lead {
   font-family: Roboto, "Saira Extra Condensed", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  color: #bd5d38;
+}
+
+/* About subtitle: matches resume.html .title treatment */
+#about .subheading {
+  font-family: "JetBrains Mono", monospace;
+  /* font-size: 13px; */
+  font-weight: 600;
+  letter-spacing: 0.28em;
 }
 
 #sideNav {
@@ -11403,7 +11433,7 @@ p.lead {
   margin-right: 0;
 }
 .social-icons .social-icon:hover {
-  background-color: #93DEFF;
+  background-color: #bd5d38;
 }
 
 .dev-icons {
@@ -11444,7 +11474,7 @@ section.resume-section-bg-dark {
 }
 .swiper-slide {
   text-align: left;
-  font-size: 18px;
+  font-size: 15px;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -11545,5 +11575,85 @@ footer {
   }
   footer {
     display: none;
+  }
+}
+
+/* Experience date ranges — matches resume.html .date treatment */
+.exp-date {
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #6c757d;
+  white-space: nowrap;
+}
+
+/* Role/project title h3s — remove global uppercase */
+#experience h3,
+#work-projects h3,
+#personal-projects h3 {
+  text-transform: none;
+}
+
+/* Project slide subtitles — normal case, muted, smaller */
+#work-projects h5,
+#personal-projects h5 {
+  text-transform: none;
+  /* font-size: 14px; */
+  color: #6c757d;
+  font-weight: 400;
+}
+
+/* Experience section labels (Overview, Projects) — mini mono label */
+#experience h6 {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 9.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6c757d;
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-top: 14px;
+}
+
+/* Resume link button in About section */
+.btn-resume-link {
+  display: inline-block;
+  padding: 0.5rem 1.4rem;
+  background-color: transparent;
+  color: #bd5d38;
+  border: 2px solid #bd5d38;
+  border-radius: 4px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.btn-resume-link:hover {
+  background-color: #bd5d38;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Mobile: prevent about section from clipping at the top navbar */
+@media (max-width: 991.98px) {
+  section.resume-section-main {
+    height: auto;
+    min-height: calc(100vh - 3.375rem);
+    padding-top: 4rem;
+  }
+}
+
+/* Mobile: swiper slide two-column stacks below 576px */
+@media (max-width: 575.98px) {
+  .swiper-slide .float-sm-start {
+    float: none !important;
+    width: 100% !important;
+    padding: 0 0 1rem 0 !important;
+  }
+  .swiper-slide .col-sm-6 {
+    padding: 0 1rem !important;
   }
 }

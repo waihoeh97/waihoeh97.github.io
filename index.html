@@ -12,9 +12,11 @@
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
         <!-- Devicon -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -36,6 +38,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
                 </ul>
             </div>
             <div class="copyright-navbar"><p>&copy; 2026. LUM WAI HOEH</p></div>
@@ -70,6 +73,9 @@
                         <a class="social-icon" href="https://www.linkedin.com/in/waihoeh" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/waihoeh97" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
+                    <div class="mt-4">
+                        <a href="resume.html" class="btn-resume-link">View Resume</a>
+                    </div>
                 </div>
             </section>
             <!-- Section - Work Projects -->
@@ -77,7 +83,7 @@
                 <div class="resume-section-content">
                 <h2 class="mb-3">Work Projects</h2>
                 <h5 class="mb-4">Browse through a collection of work projects</h5>
-                <div class="swiper mySwiper swiper-h">
+                <div class="swiper swiper-work">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="container-fluid">
@@ -252,7 +258,7 @@
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination sp-h"></div>
+                    <div class="swiper-pagination"></div>
                   </div>
                 </div>
             </section>
@@ -262,7 +268,7 @@
                 <div class="resume-section-content">
                 <h2 class="mb-3">Personal Projects</h2>
                 <h5 class="mb-4">Here are some of my hobby / freetime projects</h5>
-                <div class="swiper mySwiper">
+                <div class="swiper swiper-personal">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="container-fluid">
@@ -338,9 +344,8 @@
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
-                    <div class="swiper-pagination sp-h"></div>
+                    <div class="swiper-pagination"></div>
                   </div>
-                </div>
                 </div>
             </section>
             <!-- Experience-->
@@ -369,7 +374,7 @@
                                 <li>A roblox game using studio IP of Leo the Wildlife Ranger</li>
                             </ul>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">November 2022 - Present</span></div>
+                        <div class="flex-shrink-0"><span class="exp-date">November 2022 - Present</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
@@ -412,7 +417,7 @@
                                 <li>Updating Android and iOS store build</li>
                             </ul>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">February 2020 - October 2022</span></div>
+                        <div class="flex-shrink-0"><span class="exp-date">February 2020 - October 2022</span></div>
                     </div>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
@@ -437,7 +442,7 @@
                                 <li>Developing the Front-end website of official UOB campaign page</li>
                             </ul>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">May 2019 - September 2019</span></div>
+                        <div class="flex-shrink-0"><span class="exp-date">May 2019 - September 2019</span></div>
                     </div>
                 </div>
             </section>
@@ -503,17 +508,30 @@
 
         <!-- Initialize Swiper -->
         <script>
-            var swiper = new Swiper(".mySwiper", {
+            var swiperWork = new Swiper(".swiper-work", {
                 slidesPerView: 1,
                 spaceBetween: 30,
                 loop: true,
                 pagination: {
-                    el: ".sp-h",
+                    el: ".swiper-work .swiper-pagination",
                     clickable: true,
                 },
                 navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
+                    nextEl: ".swiper-work .swiper-button-next",
+                    prevEl: ".swiper-work .swiper-button-prev",
+                },
+            });
+            var swiperPersonal = new Swiper(".swiper-personal", {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: ".swiper-personal .swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-personal .swiper-button-next",
+                    prevEl: ".swiper-personal .swiper-button-prev",
                 },
             });
         </script>
