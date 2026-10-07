@@ -34,8 +34,8 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#work-projects">Work Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#personal-projects">Personal Projects</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#personal-projects">Personal Projects</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li> -->
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li> -->
                     <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
@@ -56,8 +56,8 @@
                     </div>
                     <p class="mb-3">Hello there!</p>
                     <p class="mb-3">I am Wai Hoeh, a generalist game programmer with experience of 5 years and counting.</p>
-                    <p class="mb-3">I have developed games in 2D and 3D, and build them for platforms on PC, Android and iOS using Unity.</p>
-                    <p class="mb-3">I aspire to work on custom game engines one day!</p>
+                    <p class="mb-3">I have developed games in 2D and 3D for PC, Android and iOS using Unity, and more recently I've been building internal tools and pipelines in Unreal Engine 5.</p>
+                    <p class="mb-3">I enjoy working close to the engine: tools, pipelines, and the systems that help other developers move faster.</p>
                     <p class="mb-3">An unforgettable story and player experience is what I believe to be of utmost importance.</p>
                     <br>
                     <!-- <p class="mb-3 fw-bold">What I'm up to currently?</p>
@@ -85,6 +85,50 @@
                 <h5 class="mb-4">Browse through a collection of work projects</h5>
                 <div class="swiper swiper-work">
                     <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="container-fluid">
+                                <div class="float-sm-start col-sm-6">
+                                </div>
+                                <div class="float-sm-start col-sm-6">
+                                    <h3 class="mb-0">Unreal Asset Browser</h3>
+                                    <h5 class="mb-0">Internal tool for rendering and browsing studio assets</h5>
+                                    <p class="mb-5">Engine: Unreal Engine 5.3 | Platform: PC (Windows)</p>
+                                    <p>A standalone Unreal application that renders images of studio assets with transparency support. It loads maps, models, animations and lighting data from a central data catalog holding thousands of assets from internal projects. It works like an editor-style viewer, but behaves more like a browser for the studio's asset library.</p>
+                                    <p class="mb-0">Key Contributions</p>
+                                    <ul>
+                                        <li>Initiated and solely developed the tool from the ground up, mainly in Blueprints with targeted C++.</li>
+                                        <li>Built an image rendering pipeline with transparency (alpha) support for asset renders.</li>
+                                        <li>Designed the data catalog that drives asset discovery and loading across thousands of assets.</li>
+                                        <li>Automated adding assets to the catalog with Python editor scripts.</li>
+                                        <li>Replaced manual builds with batch-script build automation.</li>
+                                        <li>Built pak-file content delivery (DLC-style). Assets ship as separate paks hosted on company servers, which keeps the base build small.</li>
+                                        <li>Used by other developers for rendering and adding assets, and designed to scale to every internal project.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="container-fluid">
+                                <div class="float-sm-start col-sm-6">
+                                    <div class="embed-youtube">
+                                        <iframe src="https://www.youtube.com/embed/DMbcynPiip4?&loop=1&autoplay=1&mute=1&rel=0&playlist=DMbcynPiip4" width="560" height="315"></iframe>
+                                    </div>
+                                </div>
+                                <div class="float-sm-start col-sm-6">
+                                    <h3 class="mb-0">123 Number Squad Play N Learn</h3>
+                                    <h5 class="mb-0">In house kids learning game (Android & iOS)</h5>
+                                    <p class="mb-5">Engine: Unity | Platform: Mobile</p>
+                                    <p>A kids learning game based on the 123 Number Squad IP, released on Android and iOS.</p>
+                                    <p class="mb-0">Key Contributions</p>
+                                    <ul>
+                                        <li>Led development of the project from prototype to release.</li>
+                                        <li>Architected the core game framework.</li>
+                                        <li>Implemented Unity IAP with Firebase Analytics.</li>
+                                        <li>Set up platform store integration and managed all Android and iOS builds.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                         <div class="swiper-slide">
                             <div class="container-fluid">
                                 <div class="float-sm-start col-sm-6">
@@ -262,8 +306,8 @@
                   </div>
                 </div>
             </section>
-            <hr class="m-0" />
-            <!-- Section - Personal Projects -->
+            <!-- Section - Personal Projects (disabled) -->
+            <!-- <hr class="m-0" />
             <section class="resume-section resume-section-bg-light" id="personal-projects">
                 <div class="resume-section-content">
                 <h2 class="mb-3">Personal Projects</h2>
@@ -347,9 +391,9 @@
                     <div class="swiper-pagination"></div>
                   </div>
                 </div>
-            </section>
-            <!-- Experience-->
-            <section class="resume-section resume-section-bg-dark" id="experience">
+            </section> -->
+            <!-- Experience (disabled, covered by resume.html) -->
+            <!-- <section class="resume-section resume-section-bg-dark" id="experience">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Work Experience</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
@@ -363,6 +407,18 @@
                                 <br>Work closely with different department to communicate requirements with the help of a game producer / coordinator
                             </p>
                             <h6>Projects</h6>
+                            <p class="mb-0">Unreal Asset Browser ( Unreal Engine 5, Internal Tool )</p>
+                            <ul>
+                                <li>Solely developed a runtime app that renders asset images with transparency support from a catalog of thousands of studio assets</li>
+                                <li>Automated catalog ingestion with Python and builds with batch scripts</li>
+                                <li>Implemented pak-based DLC content delivery hosted on company servers to reduce build size</li>
+                            </ul>
+                            <p class="mb-0">123 Number Squad Play N Learn ( Unity )</p>
+                            <ul>
+                                <li>Led development from prototype to release on Android and iOS</li>
+                                <li>Architected the core game framework and implemented Unity IAP with Firebase Analytics</li>
+                                <li>Handled store integration and all platform builds</li>
+                            </ul>
                             <p class="mb-0">Leo the Wildlife Ranger Kids Games</p>
                             <ul>
                                 <li>Develop and publish on mobile platform of Android and iOS</li>
@@ -445,7 +501,7 @@
                         <div class="flex-shrink-0"><span class="exp-date">May 2019 - September 2019</span></div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- Skills-->
             <section class="resume-section resume-section-bg-light" id="skills">
                 <div class="resume-section-content">
@@ -456,6 +512,7 @@
                         <li class="list-inline-item"><i class="devicon-cplusplus-plain"></i></li>
                         <li class="list-inline-item"><i class="devicon-csharp-plain"></i></li>
                         <li class="list-inline-item"><i class="devicon-unrealengine-original-wordmark"></i></li>
+                        <li class="list-inline-item"><i class="devicon-python-plain"></i></li>
                         <li class="list-inline-item"><i class="devicon-visualstudio-plain-wordmark"></i></li>
                         <li class="list-inline-item"><i class="devicon-vscode-plain-wordmark"></i></li>
                         <li class="list-inline-item"><i class="devicon-sourcetree-original-wordmark"></i></li>
@@ -473,6 +530,9 @@
                         <li>
                           <i class="fa-li fa fa-check"></i>
                           Building test builds on a weekly or fortnight basis</li>
+                        <li>
+                          <i class="fa-li fa fa-check"></i>
+                          Build automation with batch scripts &amp; Python; Unreal packaging with pak / DLC content delivery</li>
                         <li>
                           <i class="fa-li fa fa-check"></i>
                           Cross department communication &amp; discussions ( Art team, Design team, Sound team )</li>
@@ -521,6 +581,7 @@
                     prevEl: ".swiper-work .swiper-button-prev",
                 },
             });
+            /* Personal Projects disabled, re-enable together with the section
             var swiperPersonal = new Swiper(".swiper-personal", {
                 slidesPerView: 1,
                 spaceBetween: 30,
@@ -534,6 +595,7 @@
                     prevEl: ".swiper-personal .swiper-button-prev",
                 },
             });
+            */
         </script>
     </body>
 </html>
